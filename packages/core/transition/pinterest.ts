@@ -49,16 +49,16 @@ const detailIn = (
   scrollTopDiff: number,
   t: number
 ) => {
-  // 시작 위치 (from)와 끝 위치 (to) 사이의 거리 계산
+  // Calculate the distance between the start position (from) and the end position (to)
   const dx = toRect.left - fromRect.left + (toRect.width - fromRect.width) / 2;
   const dy = toRect.top - fromRect.top + (toRect.height - fromRect.height) / 2;
 
-  // scale 계산
+  // Calculate scale
   const scaleX = toRect.width / fromRect.width;
   const scaleY = toRect.height / fromRect.height;
   const scale = Math.max(scaleX, scaleY);
 
-  // clip-path 계산
+  // Calculate clip-path
   const startTop = (fromRect.top / rootRect.height) * 100;
   const startRight = ((rootRect.width - (fromRect.left + fromRect.width)) / rootRect.width) * 100;
   const startBottom =
@@ -87,11 +87,11 @@ const detailOut = (
   scrollTopDiff: number,
   t: number
 ) => {
-  // 시작 위치 (from)와 끝 위치 (to) 사이의 거리 계산
+  // Calculate the distance between the start position (from) and the end position (to)
   const dx = toRect.left - fromRect.left + (toRect.width - fromRect.width) / 2;
   const dy = toRect.top - fromRect.top + (toRect.height - fromRect.height) / 2;
 
-  // scale 계산
+  // Calculate scale
   const scaleX = toRect.width / fromRect.width;
   const scaleY = toRect.height / fromRect.height;
   const scale = Math.max(scaleX, scaleY);
@@ -113,16 +113,16 @@ const galleryOut = (
   scrollTopDiff: number,
   t: number
 ) => {
-  // 시작 위치 (from)와 끝 위치 (to) 사이의 거리 계산
+  // Calculate the distance between the start position (from) and the end position (to)
   const dx = toRect.left - fromRect.left + (toRect.width - fromRect.width) / 2;
   const dy = toRect.top - fromRect.top + (toRect.height - fromRect.height) / 2 - scrollTopDiff;
 
-  // scale 계산
+  // Calculate scale
   const scaleX = toRect.width / fromRect.width;
   const scaleY = toRect.height / fromRect.height;
   const scale = Math.max(scaleX, scaleY);
 
-  // clip-path 계산
+  // Calculate clip-path
   const startTop = (fromRect.top / rootRect.height) * 100;
   const startRight = ((rootRect.width - (fromRect.left + fromRect.width)) / rootRect.width) * 100;
   const startBottom =
@@ -156,7 +156,7 @@ const galleryIn = (
   const dx = galleryRect.left - detailRect.left + (galleryRect.width - detailRect.width) / 2;
   const dy = galleryRect.top - detailRect.top + (galleryRect.height - detailRect.height) / 2;
 
-  // scale 계산
+  // Calculate scale
   const scaleX = galleryRect.width / detailRect.width;
   const scaleY = galleryRect.height / detailRect.height;
   const scale = Math.max(scaleX, scaleY);

@@ -1,4 +1,4 @@
-import { out, BaseTransitionParams, createTransition, createParams } from './boilerplate/index.js';
+import { out, BaseTransitionParams, createTransition, createParams } from './boilerplate';
 import type { TransitionFactory } from '../types';
 
 function getOffset(node: Element): number {

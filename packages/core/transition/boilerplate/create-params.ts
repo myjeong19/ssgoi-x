@@ -1,4 +1,4 @@
-import { BaseTransitionParams } from './create-transition';
+import type { BaseTransitionParams } from './create-transition';
 
 // Merges default parameters with provided ones
 export function createParams(

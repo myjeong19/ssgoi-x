@@ -1,4 +1,4 @@
-import { out } from './boilerplate/index.js';
+import { out } from './boilerplate';
 import type { TransitionFactory } from '../types';
 
 const DEFAULT_VELOCITY = 1.2;
