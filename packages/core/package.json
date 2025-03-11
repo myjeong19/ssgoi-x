@@ -8,11 +8,14 @@
   "sideEffects": false,
   "files": [
     "dist",
-    "src"
+    "*.ts",
+    "*.tsx",
+    "!**/*.test.*",
+    "!**/*.spec.*"
   ],
   "scripts": {
-    "build": "npx tsup src/index.ts --format cjs,esm --dts",
-    "dev": "npx tsup src/index.ts --format cjs,esm --watch",
+    "build": "npx tsup index.ts --format cjs,esm --dts",
+    "dev": "npx tsup index.ts --format cjs,esm --watch",
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
@@ -27,4 +30,4 @@
     "tsup": "^8.0.0",
     "typescript": "^5.0.0"
   }
-} 
+}
