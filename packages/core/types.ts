@@ -20,3 +20,14 @@ export type TransitionFactory<T = object> = (params?: T) => {
   in: GetTransitionConfig;
   out: GetTransitionConfig;
 };
+
+export interface RouteInfo {
+  path: string;
+  url: URL;
+}
+export type TransitionEffect = {
+  in: GetTransitionConfig;
+  out: GetTransitionConfig;
+};
+
+export type TransitionRouteConfig = (from: RouteInfo, to: RouteInfo) => TransitionEffect;
